@@ -1,0 +1,14 @@
+.input-cmp {}
+
+.input-cmp label {
+    display: block;
+}
+
+.input-cmp textarea {
+    resize: none;
+}
+
+.input-cmp button {
+    display: block;
+    margin: auto;
+}
