@@ -1,3 +1,7 @@
+# Oversetter for røverspråk
+
+Røverspråket er et skjulespråk der hver konsonant blir gjentatt med en o imellom. Denne oversetteren har forenklet konseptet ved å bare gjøre dette med den siste konsonanten i et ord. Den kan også oversette tilbake.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
