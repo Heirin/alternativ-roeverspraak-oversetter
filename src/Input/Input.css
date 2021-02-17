@@ -2,13 +2,24 @@
 
 .input-cmp label {
     display: block;
+    margin-bottom: 1vh;
 }
 
 .input-cmp textarea {
     resize: none;
+    outline: none;
+    width: 90%;
+    border-radius: 5px;
+    border:  #d3e0ea 1px solid;
 }
 
 .input-cmp button {
     display: block;
-    margin: auto;
+    margin: 1vh auto;
 }
+
+/* @media only screen and (min-width: 768px) {
+    .input-cmp textarea {
+        width: 80%;
+    }
+} */

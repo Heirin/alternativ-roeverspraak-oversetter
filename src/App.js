@@ -11,7 +11,7 @@ class App extends Component {
   /*Endrer status på visibility-egenskapen til state-objektet*/
   toggleVisibilityHandler = () => {
     const isVisible = this.state.visibility;
-    this.setState({visibility: !isVisible});
+    this.setState({ visibility: !isVisible });
   }
 
   /*Sjekker en bokstav for om det er en vokal og returnerer true om det stemmer*/
@@ -28,7 +28,7 @@ class App extends Component {
       let index = word.length - 1;
       let charArray = [...word];
       let lastChar = charArray[index];
-      if (!this.isVowel(lastChar)){
+      if (!this.isVowel(lastChar)) {
         charArray.splice(index + 1, 0, "o", lastChar);
       }
       let newWord = charArray.join("");
@@ -47,7 +47,7 @@ class App extends Component {
       let index = word.length - 1;
       let charArray = [...word];
       let lastChar = charArray[index];
-      if (!this.isVowel(lastChar)){
+      if (!this.isVowel(lastChar)) {
         charArray.splice(index - 1, 2);
       }
       let newWord = charArray.join("");
@@ -61,21 +61,23 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Oversetter for røverspråk</h1>
-        <button onClick={this.toggleVisibilityHandler}>Endre oversettingsretning</button>
-        {
-          this.state.visibility ?
-          <div>
-            <Input direction="til" submit={event => this.tilRoever(event)} />
-          </div> : null
-        }
-        {
-          !this.state.visibility ?
-          <div>
-            <Input direction="fra" submit={event => this.fraRoever(event)} />
-          </div> : null
-        }
-        <p>{this.state.translation}</p>
+        <div className="content">
+          <h1>Oversetter for røverspråk</h1>
+          <button className="toggle" onClick={this.toggleVisibilityHandler}>Endre oversettingsretning</button>
+          {
+            this.state.visibility ?
+              <div>
+                <Input direction="til" submit={event => this.tilRoever(event)} />
+              </div> : null
+          }
+          {
+            !this.state.visibility ?
+              <div>
+                <Input direction="fra" submit={event => this.fraRoever(event)} />
+              </div> : null
+          }
+          <p>{this.state.translation}</p>
+        </div>
       </div>
     );
   }
