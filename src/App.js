@@ -14,7 +14,13 @@ class App extends Component {
     this.setState({ visibility: !isVisible });
   }
 
-  /*Sjekker en bokstav for om det er en vokal og returnerer true om det stemmer*/
+  /*Sjekker om en karakter er et punktum e.l. og returnerer true om det stemmer*/ 
+  isPunctuation = char => {
+    let punctuation = [".", ",", ";", "!"];
+    return punctuation.includes(char);
+  }
+
+  /*Sjekker om en karakter er en vokal og returnerer true om det stemmer*/
   isVowel = char => {
     let vowels = ["a", "e", "i", "o", "u", "y", "æ", "ø", "å"];
     return vowels.includes(char);
@@ -28,6 +34,10 @@ class App extends Component {
       let index = word.length - 1;
       let charArray = [...word];
       let lastChar = charArray[index];
+      if (this.isPunctuation(lastChar)){
+        index--;
+        lastChar = charArray[index];
+      }
       if (!this.isVowel(lastChar)) {
         charArray.splice(index + 1, 0, "o", lastChar);
       }
@@ -47,6 +57,10 @@ class App extends Component {
       let index = word.length - 1;
       let charArray = [...word];
       let lastChar = charArray[index];
+      if (this.isPunctuation(lastChar)){
+        index--;
+        lastChar = charArray[index];
+      }
       if (!this.isVowel(lastChar)) {
         charArray.splice(index - 1, 2);
       }
