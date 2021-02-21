@@ -1,6 +1,5 @@
-# Oversetter for røverspråk
-
-Røverspråket er et skjulespråk der hver konsonant blir gjentatt med en o imellom. Denne oversetteren har forenklet konseptet ved å bare gjøre dette med den siste konsonanten i et ord. Den kan også oversette tilbake.
+# Oversetter for skjulespråk
+Et skjulespråk er en enkel form for kryptering av språk som noen, gjerne barn, bruker til hemmelig kommunikasjon. Røverspråket er et skjulespråk med en krypteringsmetode der hver konsonant blir gjentatt med en o imellom. Denne oversetteren har forenklet konseptet ved å bare gjøre dette med den siste konsonanten i et ord. Den kan også oversette tilbake.
 
 # Getting Started with Create React App
 
